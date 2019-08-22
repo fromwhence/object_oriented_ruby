@@ -38,22 +38,22 @@ class Car < Vehicle
 end
 
 class Bike < Vehicle
+  def initialize(input_options)
+    @type = input_options[:type]
+    @weight = input_options[:weight]
+    @gear = input_options[:gear]
+    super()
+  end
 
   def ring_bell
     puts "Ring ring!"
   end
 end
 
-class Bike
 
-  def ring_bell
-    puts "Ring ring!"
-  end
-
-end
-
-car = Car.new
-bike = Bike.new
+car = Car.new(fuel: "electric", make: "Tesla", model: "Model X")
+bike = Bike.new(type: "mountain bike", weight: "22 lbs", gear: "full-suspension")
+p bike
 
 
 

@@ -60,8 +60,7 @@ car = Car.new(
 bike = Bike.new(
               type: "mountain bike", 
               weight: "22 lbs", 
-              gear: "18"
-              )
+              gear: "18")
 p bike
 p car
 

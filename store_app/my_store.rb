@@ -29,4 +29,4 @@ item_3 = Food.new(
                   color: "yellow"
                   #shelf_life: "2 weeks"
                   )
-
+p item_2

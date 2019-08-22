@@ -1,3 +1,12 @@
+
+module Reportable
+    def send_report
+    puts "Sending email..."
+    # code to send email
+    puts "Email sent"
+  end
+end
+
 class Employee
   attr_reader :first_name, :last_name, :active, :active
   attr_writer :active
@@ -33,12 +42,10 @@ class Manager < Employee
   def give_all_raises
     # input: @employees , Array of Employee Objects
     # effect: all employees will have a raise
-
     # steps
     # 1 - access my list of employees
     # 2 - access each employee individually
     # 3 - change the individual employee, so they get a raise
-
     index = 0
     while index < @employees.length
       employee = @employees[index]
@@ -54,12 +61,15 @@ class Manager < Employee
 
   end
 
-  def send_report
-    puts "Sending email..."
-    # code to send email
-    puts "Email sent"
+class Intern < Employee
+
+  include Reportable
+ 
   end
+
 end
+
+
 
 # Runner Code
 # ==========================
@@ -85,8 +95,15 @@ manager = Manager.new(
                       employees: [employee_1, employee_2]
                       )
 
+intern = Intern.new(first_name: "Jimmy", 
+                    last_name: "Olse", 
+                    salary: 40000, 
+                    active: true
+                    )
+
 p employee_1.active
 p employee_2.active
 
+p intern.send_report
 
 

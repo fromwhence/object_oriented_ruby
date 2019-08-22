@@ -29,6 +29,7 @@ class Car < Vehicle
     @fuel = input_options[:fuel]
     @make = input_options[:make]
     @model = input_options[:model]
+    super()
   end
 
   def honk_horn
@@ -51,9 +52,18 @@ class Bike < Vehicle
 end
 
 
-car = Car.new(fuel: "electric", make: "Tesla", model: "Model X")
-bike = Bike.new(type: "mountain bike", weight: "22 lbs", gear: "full-suspension")
+car = Car.new(
+              fuel: "electric", 
+              make: "Tesla", model: 
+              "Model X"
+              )
+bike = Bike.new(
+              type: "mountain bike", 
+              weight: "22 lbs", 
+              gear: "18"
+              )
 p bike
+p car
 
 
 

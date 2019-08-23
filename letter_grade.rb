@@ -7,24 +7,24 @@
 # go("a", "b", "c", "d") #arguments
 
 
-def calculate_letter_grade(*scores)
+def calculate_letter_grade(*scores) # argument
 
-  # p scores
-  
+  sum = 0
   index = 0
+
   while index < scores.length
-    scores[index] + scores[index] 
+    number = scores[index]
+    sum = sum + number
     index += 1
   end
 
-  p scores
-
+  p sum
+  p average = sum / scores.length
 
 
 end
 
-calculate_letter_grade(90, 100, 95, 75)
+calculate_letter_grade(90, 100, 95, 75) # parameters
 
-
-
+# refactor 
 

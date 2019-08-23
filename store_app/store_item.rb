@@ -1,122 +1,51 @@
 
-# Javascript syntax
-# bicycle_1 = {type: "road bike", color: "black", price: "1000"}
-# bicycle_2 = {type: "mountain bike", color: "red", price: "1200"}
-# bicycle_3 = {type: "hybrid bike", color: "white", price: "450"}
+module StoreFront
+  class Bicycle
 
-# Ruby syntax
-# bicycle_1 = {:type => "road bike", :color => "black", :price => "1000"}
-# bicycle_2 = {:type => "mountain bike", :color => "red", :price => "1200"}
-# bicycle_3 = {:type => "hybrid bike", :color => "white", :price  => "450"}
+    # attr_reader :type, :color, :price
+    # attr_writer :type, :color, :price
 
-# puts bicycle_2[:type]
+    def initialize(input_options)
+      @type = input_options[:type]
+      @color = input_options[:color]
+      @price = input_options[:price]
+    end
 
-# class Bicycle
+    def type=(input_type)
+      @type = input_type
+    end
 
-#   attr_reader :type, :color, :price
-#   attr_writer :type, :color, :price
+    def type
+      return @type
+    end
 
-#   def initialize(type, color, price)
-#     @type = type
-#     @color = color
-#     @price = price
-#   end
+    def color=(input_color)
+      @color = input_color
+    end
 
-#   # def type=(input_type)
-#   #   @type = input_type
-#   # end
+    def color
+      return @color
+    end
 
-#   # def type
-#   #   return @type
-#   # end
+    def price=(input_number)
+      @price = input_number
+    end
 
-#   # def color=(input_color)
-#   #   @color = input_color
-#   # end
+    def price
+      return @price
+    end
 
-#   # def color
-#   #   return @color
-#   # end
-
-#   # def price=(input_number)
-#   #   @price = input_number
-#   # end
-
-#   # def price
-#   #   return @price
-#   # end
-
-# end
-
-# Runner Code
-# ===============
-
-# bicycle_1 = Bicycle.new("mountain bike", "blue", 1500)
-# bicycle_2 = Bicycle.new("road bike", "white", 1200)
-
-
-# p bicycle_2.type
-# bicycle_1.color = "green"
-# p bicycle_1
-
-class Bicycle
-
-  # attr_reader :type, :color, :price
-  # attr_writer :type, :color, :price
-
-  def initialize(input_options)
-    @type = input_options[:type]
-    @color = input_options[:color]
-    @price = input_options[:price]
   end
 
-  def type=(input_type)
-    @type = input_type
-  end
+  class Food
 
-  def type
-    return @type
-  end
+    def intialize
+      @shelf_life = shelf_life
+    end
 
-  def color=(input_color)
-    @color = input_color
-  end
-
-  def color
-    return @color
-  end
-
-  def price=(input_number)
-    @price = input_number
-  end
-
-  def price
-    return @price
-  end
-
+  end 
 end
 
-class Food
 
-  def intialize
-    @shelf_life = shelf_life
-  end
-
-  
-
-
-
-# Runner Code
-# ===============
-
-bicycle_1 = Bicycle.new(
-                        type: "mountain bike", 
-                        color: "blue", 
-                        price: 1500
-                        )
-# bicycle_2 = Bicycle.new("road bike", "white", 1200)
-p bicycle_1
-bicycle_1.color = "orange"
-p bicycle_1
 
 

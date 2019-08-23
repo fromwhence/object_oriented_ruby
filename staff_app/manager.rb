@@ -1,40 +1,42 @@
 require "./employee.rb"
-require "./reportable"
+require "./reportable.rb"
 
-class Manager < Employee
-  def initialize(input_options)
-    super(input_options)
+module Actualize
 
-    @employees = input_options[:employees]
-  end
+  class Manager < Employee
+    def initialize(input_options)
+      super(input_options)
 
-  def employees
-    return @employees
-  end
+      @employees = input_options[:employees]
+    end
 
-  def give_all_raises
-    index = 0
-    while index < @employees.length
-      employee = @employees[index]
-      p employee.give_annual_raise
-      index += 1
+    def employees
+      return @employees
+    end
+
+    def give_all_raises
+      index = 0
+      while index < @employees.length
+        employee = @employees[index]
+        p employee.give_annual_raise
+        index += 1
+      end
+    end
+
+    def fire_all_employees
+      @employees.each do |employee|
+      employee.active = false
+    end
+
+    end
+
+    def send_report
+      puts "Sending email..."
+      # code to send email
+      puts "Email sent"
     end
   end
-
-  def fire_all_employees
-    @employees.each do |employee|
-    employee.active = false
-  end
-
-  end
-
-  def send_report
-    puts "Sending email..."
-    # code to send email
-    puts "Email sent"
-  end
 end
-
 
 
 
